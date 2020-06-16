@@ -102,3 +102,20 @@ class LRUCache:
             self.od[key] = value
             if len(self.od) > self.cap:
                 self.od.popitem(last=False)
+
+
+
+def reverseList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        if not head:
+            return None
+        if not head.next:
+            return head
+        headNode = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+
+        return headNode

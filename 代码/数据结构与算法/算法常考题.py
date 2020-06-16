@@ -25,17 +25,14 @@ class Solution:
     def reverseList(self, head):
         pre, cur = None, head
         while cur:
-            nextnode = cur.next
-            cur.next = pre
+k            cur.next = pre
             pre = cur
             cur = nextnode
         return pre
 
 
-s = Solution()
-l = ListNode(12345)
-s.reverseList(l)
-print(s.reverseList(l))
+s = Solution([1,2,3])
+print(s.reverseList())
 
 
 
